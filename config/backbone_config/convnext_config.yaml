@@ -1,0 +1,14 @@
+backbone: "convnext_v2"
+weights_file: "./pretrained_ckpt/convnextv2_base_22k_384_ema.pt"
+img_size: 384
+
+train:
+  batch_size: 8
+  num_epochs: 120
+  base_lr: 4e-5         
+  weight_decay: 1e-4   
+  backbone_lr_scale: 0.2
+  backbone_weight_decay: 1e-2
+  head_weight_decay: 1e-4
+  warmup_epochs: 10     
+  clip_grad: 1.0

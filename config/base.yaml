@@ -1,0 +1,61 @@
+device: "cuda:0"
+seed: 3407
+num_workers: 12
+
+backbone: "swin_v2"
+img_size: 384
+unified_channel: 128
+enum: 4
+
+pretrained: True
+weights_file: ""
+
+train:
+  data_dir: "/home/huangliucheng/code_file/ImageDataSet/Train_data/"
+  train_csv: "./dataset/Train/train_data.csv"
+  save_dir: "./snapshot/"
+  log_dir: "./train_logs/"
+  tf_log_dir: "./tf_logs/"
+
+  batch_size: 2
+  num_epochs: 100
+  base_lr: 1e-4
+  weight_decay: 1e-4
+  backbone_lr_scale: 0.2
+  backbone_weight_decay: 1e-4
+  head_weight_decay: 1e-4
+  clip_grad: 1.0
+  print_freq: 10
+  vis_freq: 200
+  prefetch_factor: 2
+  edge_kernel_size: 3
+  edge_smooth_kernel_size: 0
+  edge_smooth_sigma: 1.0
+
+  eval_start_epoch: 5
+  save_freq: 5
+  ema_decay: 0.999
+
+eval:
+  data_dir: "/home/huangliucheng/code_file/ImageDataSet/COD_Test/"
+  camo_csv: "./dataset/Test/CAMO_data.csv"
+  chameleon_csv: "./dataset/Test/CHAMELEON_data.csv"
+  cod10k_csv: "./dataset/Test/COD10K_data.csv"
+  nc4k_csv: "./dataset/Test/NC4K_data.csv"
+  cucod_csv: "/home/huangliucheng/code_file/ImageDataSet/COD_Test/CUCOD_data.csv"
+
+loss:
+  use_edge_loss: True
+  edge_loss_weight: 1.0
+  use_main_edl: True
+  main_edl_weight: 1.0
+  main_kl_weight: 1.0
+  kl_annealing_epochs: null
+  use_branch_loss: True
+  branch_loss_weight: 1.0
+  use_branch_edl: True
+  branch_edl_weights: [1.0, 1.0, 1.0, 1.0]
+  branch_kl_weights: [1.0, 1.0, 1.0, 1.0]
+
+inference:
+  output_mode: "foreground_belief"

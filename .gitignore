@@ -1,0 +1,52 @@
+# Pretrained weights and model checkpoints
+pretrained_ckpt/*
+!pretrained_ckpt/.gitkeep
+!pretrained_ckpt/README.md
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Training and inference outputs
+snapshot/
+results/
+train_logs/
+tf_logs/
+runs/
+*.log
+
+# Local IDE/editor settings
+.vscode/
+.idea/
+
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+conda-env/
+
+# Local environment/config files
+.env
+.env.*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Temporary archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz

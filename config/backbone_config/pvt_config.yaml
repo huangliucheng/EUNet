@@ -1,0 +1,15 @@
+backbone: "pvt_v2_b4"
+weights_file: "./pretrained_ckpt/pvt_v2_b4.pth"
+img_size: 384
+unified_channel: 128
+
+train:
+  num_epochs: 150
+  batch_size: 16
+  base_lr: 1e-4
+  weight_decay: 1e-4
+  backbone_lr_scale: 0.2
+  backbone_weight_decay: 1e-2
+  head_weight_decay: 1e-4
+  warmup_epochs: 10
+  clip_grad: 1.0

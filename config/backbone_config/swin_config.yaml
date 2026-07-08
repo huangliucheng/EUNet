@@ -1,0 +1,14 @@
+backbone: "swin_v2"
+weights_file: "./pretrained_ckpt/swinv2_base_patch4_window12_192_22k.pth"
+img_size: 384
+
+train:
+  batch_size: 2
+  num_epochs: 120
+  base_lr: 8e-5
+  weight_decay: 1e-4
+  backbone_lr_scale: 0.2
+  backbone_weight_decay: 1e-2
+  head_weight_decay: 1e-4
+  warmup_epochs: 8
+  clip_grad: 1.0

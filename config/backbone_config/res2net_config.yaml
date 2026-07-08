@@ -1,0 +1,14 @@
+backbone: "res2net50"
+weights_file: "./pretrained_ckpt/res2net50_v1b_26w_4s-3cf99910.pth"
+img_size: 384
+
+train:
+  batch_size: 16
+  num_epochs: 120
+  base_lr: 1e-4
+  weight_decay: 1e-4
+  backbone_lr_scale: 0.2
+  backbone_weight_decay: 1e-4
+  head_weight_decay: 1e-4
+  warmup_epochs: 3
+  clip_grad: 2.0
