@@ -2,7 +2,7 @@
 
 [English](README.md) | [中文](README_CN.md)
 
-论文标题：**EUNet: Evidential Multi-Evidence Fusion for Uncertainty-Aware Camouflaged Object Detection**
+论文标题：[**EUNet: Evidential Multi-Evidence Fusion for Uncertainty-Aware Camouflaged Object Detection**](https://link.springer.com/article/10.1007/s00371-026-04690-w)
 
 本仓库是该论文的代码实现，包含 EUNet 的训练脚本、推理脚本、配置文件、模型实现和数据集 CSV 模板，用于不确定性感知的伪装目标检测。
 
