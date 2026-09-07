@@ -2,7 +2,7 @@
 
 [English](README.md) | [中文](README_CN.md)
 
-Title: **EUNet: Evidential Multi-Evidence Fusion for Uncertainty-Aware Camouflaged Object Detection**
+Title: [**EUNet: Evidential Multi-Evidence Fusion for Uncertainty-Aware Camouflaged Object Detection**](https://link.springer.com/article/10.1007/s00371-026-04690-w)
 
 This repository provides the code implementation of the EUNet paper. It includes the training script, inference script, configuration files, model implementation, and dataset CSV templates used for uncertainty-aware camouflaged object detection.
 
